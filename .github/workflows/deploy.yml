@@ -6,6 +6,9 @@ on:
       - source
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -31,6 +34,10 @@ jobs:
 
       - name: Deploy to master branch
         run: |
+          cd public
+          git init
           git config user.name "Max3753"
           git config user.email "2964831577@qq.com"
-          npx hexo deploy
+          git add -A
+          git commit -m "Site updated: $(date -u '+%Y-%m-%d %H:%M:%S')"
+          git push --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:master
