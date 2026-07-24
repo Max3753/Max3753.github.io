@@ -1,0 +1,157 @@
+# Butterfly
+
+#logo 
+#nav:
+#  logo:''
+#  display_tittle: true
+#  fixed: true
+
+#menu
+menu:
+  首页: /
+  一些想法: /archives
+  关于: /about
+  标签: /tags
+  分类: /categories
+  友情链接: /link
+
+#代码区域
+code_blocks:
+  theme: light
+  macStyle: true
+  language: true
+  #代码区域限制
+  height_limit: false
+  word_wrap: false
+  #代码块复制
+  copy : true
+  copy_text: 复制
+
+#social
+social:
+  fab fa-github: https://github.com/Max3753 || Github || '#24292e'
+  fas fa-envelope: 2964831577@qq.com || Email || '#4a7dbe'
+  
+#标签图标 
+favicon: /img/favicon.ico
+
+# avatar 头像
+avatar: 
+  img: /img/favicon.png
+  effect: false
+
+#图片
+#顶部图片
+disable_top_img: false
+default_top_img: /img/topimg.jpg
+#首页图片
+disable_index_img: true
+index_img: /img/indeximg.jpg
+#详情页图片
+disable_post_img: false
+post_img: /img/postimg.jpg  
+#文章图片
+
+#底部图片
+
+footer_img: true
+
+#背景
+background: /img/topimg.jpg
+
+#封面
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+
+  default_cover: 
+    - /img/cover1.jpg
+    - /img/cover2.jpg
+    - /img/cover3.jpg
+    - /img/cover4.jpg
+
+#评论
+comments:
+  use: Valine #,Disqus # 可实现单评论、双评论(最多两个)
+  text: true # 是否显示评论服务商的名字
+  lazyload: true # 是否为评论开启lazyload，开启后，只有滚动到评论位置时才会加载评论所需要的资源（开启lazyload后，评论数将不显示）
+  count: true # 是否在文章顶部显示评论数，livere、Giscus 和 utterances 不支持评论数显示
+  card_post_count: false # 是否在首页文章卡片显示评论数，gitalk、livere 、Giscus 和 utterances 不支持评论数显示
+
+valine:
+  enenable: true
+  appId: T5unit23g2hjYumdb7V44tmv-gzGzoHsz
+  appKey: bzNl2n7DEXoV6R9ZmgRtpuKv
+  avatar: monsterid # gravatar style https://valine.js.org/#/avatar
+  #serverURLs: http[s]://[tab/us].avoscloud.com # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
+  visitor: false
+  path: window.location.pathnamme
+  lang: zh-cn
+    
+#错误页
+error_img: 
+  flink: /img/friend_404.gif
+  post_page: /img/404.jpg
+
+error_404:
+  enable: true
+  subtitle: 'Page Not Found'
+  background: /img/error-page.png
+
+# Lazyload
+lazyload:
+  enable: true
+  native: false
+  field: site
+  placeholder:
+  blur: false
+
+# PWA
+pwa:
+  enable: true
+  manifest: /img/favicon.png
+  apple_touch_icon: /img/favicon.png
+  favicon_32_32: /img/favicon.png
+  favicon_16_16: /img/favicon.png
+  mask_icon: /img/favicon.png
+
+# PJAX
+pjax:
+  enable: true
+
+# Instant.page
+instantpage: true
+
+# Preloader
+preloader:
+  enable: true
+  source: 1
+
+# Dark Mode - 跟随系统
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: 1
+
+# Word Count
+wordcount:
+  enable: true
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+# Search
+search:
+  use: local_search
+  placeholder: 搜索文章...
+
+  local_search:
+    preload: true
+    top_n_per_article: 1
+    unescape: false
+
+# CDN
+CDN:
+  internal_provider: jsdelivr
+  third_party_provider: jsdelivr
