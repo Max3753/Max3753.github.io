@@ -1,0 +1,33 @@
+{
+  "name": "hexo-blog",
+  "type": "static-blog",
+  "language": ["javascript", "markdown", "stylus"],
+  "packageManager": "pnpm",
+  "toolchain": {
+    "build": {
+      "command": "pnpm build",
+      "description": "生成静态文件 (hexo generate)"
+    },
+    "clean": {
+      "command": "pnpm clean",
+      "description": "清理构建产物 (hexo clean)"
+    },
+    "server": {
+      "command": "pnpm server",
+      "description": "本地预览 (hexo server)"
+    },
+    "deploy": {
+      "command": "npx hexo deploy",
+      "description": "部署到 GitHub Pages"
+    },
+    "quality-gates": {
+      "build-pass": "pnpm build 必须无错误",
+      "search-xml": "search.xml 必须生成且包含全部文章",
+      "search-css": "index.css 必须包含 #local-search .search-dialog .local-search-box input 样式"
+    }
+  },
+  "git-hooks": {
+    "pre-commit": [],
+    "post-commit": []
+  }
+}
